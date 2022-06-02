@@ -1,0 +1,52 @@
+html {
+  font-size: 62.5%;
+  background: rgb(39, 91, 246);
+  padding: 2rem;
+  height: 100vh;
+  overflow: hidden;
+}
+
+body {
+  overflow-y: auto;
+  position: relative;
+  margin: auto;
+  height: calc(100vh - 4rem);
+  line-height: 1.75;
+  font-size: 1.6rem;
+  border-radius: 1.6rem;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+
+  &::before {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    width: calc(100vw - 4rem);
+    height: calc(100vh - 4rem);
+    top: 2rem;
+    left: 2rem;
+    z-index: -1;
+    pointer-events: none;
+    background: #fff;
+    border-radius: 1.6rem;
+  }
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+*,*::before,*::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+.l-body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}

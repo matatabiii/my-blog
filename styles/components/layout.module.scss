@@ -1,0 +1,28 @@
+.body {
+  // .body__main
+  &__main {
+    display: grid;
+    min-height: calc(100vh - 4rem);
+    grid-template-rows: auto 1fr auto;
+  }
+}
+
+.header {
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding: 2rem;
+
+  // .header__heading
+  &__heading {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgb(23, 23, 23);
+    border-radius: 50%;
+    color: #fff;
+    font-size: 4rem;
+    width: 2em;
+    height: 2em;
+  }
+}
