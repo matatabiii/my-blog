@@ -1,26 +1,23 @@
+import Link from 'next/link'
 import { ReactNode } from 'react'
-
+import styles from '../styles/components/card.module.scss'
 type Props = {
   children?: ReactNode
   title: string
   content: string
 }
 
-const styles = {
-  block: {
-    display: 'flex',
-    background: '#fff',
-    borderRadius: '1.6rem',
-    padding: '2rem',
-    boxShadow: '0px 8px 16px -2px rgba(10,10,10,0.1), 0px 0px 0px 1px rgba(10,10,10,0.05)'
-  },
-}
-
 export default function Card({ children, title, content }: Props) {
   return (
-    <article style={styles.block}>
-      <h2>{title}</h2>
-      <div>{content}</div>
+    <article className={styles.post}>
+      <Link href={`/`}>
+        <a className={styles.post__inner}>
+          <h2 className={styles.post__title}>{title}</h2>
+          <div className={styles.post__text}>
+            <p>{content}</p>
+          </div>
+        </a>
+      </Link>
     </article>
   )
 }
